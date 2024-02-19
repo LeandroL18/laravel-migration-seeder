@@ -22,7 +22,7 @@ class TrainFactory extends Factory
             'end_station' => fake() -> city(),
             'start_time' => fake() -> dateTimeBeteewn('now','+3 days'),
             'end_time' => fake() -> dateTimeBeteewn('+4 days','+1 week'),
-            'code' => fake() -> numerify('train-#####'),
+            'code' => fake() -> unique() -> numerify('train-#####'),
             'number_carriages' => fake() -> numberBeteewn(5, 20),
         ];
     }
